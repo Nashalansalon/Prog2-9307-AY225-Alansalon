@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Java Sources",
+      "type": "shell",
+      "command": "C:\\Program Files\\Java\\jdk-25\\bin\\javac.exe --enable-preview -source 25 -d bin PrelimExam\\JAVA\\*.java",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$javac"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Run Main",
+      "type": "shell",
+      "command": "C:\\Program Files\\Java\\jdk-25\\bin\\java.exe --enable-preview -cp bin Main",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Build and Run Main",
+      "dependsOn": ["Compile Java Sources", "Run Main"],
+      "dependsOrder": "sequence"
+    }
+  ]
+}

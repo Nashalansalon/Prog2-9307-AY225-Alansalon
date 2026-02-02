@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug StudentRecordSystem",
+      "request": "launch",
+      "mainClass": "StudentRecordSystem",
+      "cwd": "${workspaceFolder}",
+      "vmArgs": "--enable-preview",
+      "preLaunchTask": "Compile Java Sources",
+      "console": "integratedTerminal",
+      "classPaths": [
+        "${workspaceFolder}/bin"
+      ]
+    }
+  ]
+}

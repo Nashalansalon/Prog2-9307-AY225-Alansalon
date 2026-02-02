@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Record System — Web</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Student Record System — Web</h1>
+    <div class="top-panel">
+      <div class="left">
+        <button id="btnDeleteTop">Delete</button>
+      </div>
+      <div class="center">
+        <span id="status"></span>
+      </div>
+      <div class="right controls">
+        <input type="file" id="csvFile" accept=".csv">
+        <button id="btnFetchServer">Load from server</button>
+        <button id="btnSaveServer">Save to server</button>
+        <button id="btnExport">Export CSV</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="input-panel">
+      <div class="labels">
+        <label>StudentID</label>
+        <label>First Name</label>
+        <label>Last Name</label>
+        <label></label>
+      </div>
+      <div class="inputs">
+        <input id="txtStudentID" placeholder="StudentID">
+        <input id="txtFirstName" placeholder="First Name">
+        <input id="txtLastName" placeholder="Last Name">
+        <button id="btnAdd">Add</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="recordsTable">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
